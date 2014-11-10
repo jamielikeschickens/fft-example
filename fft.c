@@ -45,9 +45,9 @@ void fft(complex float *dataBuffer, int size) {
 complex float *splitArray(complex float *array, int offset, int size) {
     complex float *newArray = malloc(size * sizeof(complex float));
     int count = offset;
-    for (int i=0; i < size; ++i) {
-	        newArray[i] = array[count];
-	        count += 2;
-	    }
+	for (int i=0; i < size; ++i) {
+		newArray[i] = array[count];
+		count += 2;
+	}
     return newArray;
 }
